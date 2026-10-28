@@ -1,0 +1,45 @@
+/* Slog za stran o standardu ISO 3103 */
+
+/* Besedilo strani: ozek stolpec na sredini */
+body {
+  max-width: 45em;
+  margin: 0 auto;
+  padding: 1em;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+  color: #222222;
+}
+
+/* Vsi naslovi */
+h1, h2, h3 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Naslovi razdelkov */
+h2 {
+  color: #3b8b13;
+  border-bottom: 1px solid #cccccc;
+}
+
+/* Citati */
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 4px solid #cccccc;
+  font-style: italic;
+}
+
+/* Tabele */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.25em 0.75em;
+  border: 1px solid #cccccc;
+}
+
+/* Slike niso širše od stolpca z besedilom */
+img {
+  max-width: 100%;
+}
