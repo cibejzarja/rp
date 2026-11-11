@@ -5,7 +5,7 @@
 \usepackage{lmodern}
 \usepackage{amsthm}
 \usepackage{url}
-
+\usepackage{booktabs}
 {\theoremstyle{definition}
 \newtheorem{definicija}{Definicija}}
 {\theoremstyle{plain}
@@ -68,7 +68,7 @@ Prirejeno po:
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
  \end{definicija}
 
-Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
+Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}. % sklic: table:mag3
 
    
       
@@ -76,6 +76,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
    
 \caption{Magični kvadrat reda}
 \label{table:mag3}
+\large
 % - napis nad tabelo: Magični kvadrat reda 3
 % - oznaka: table:mag3
 % Začetek magičnega kvadrata
@@ -101,7 +102,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
    \end{equation}
  \end{definicija}
 
-Magični kvadrat v tabeli ?? je normalen.
+Magični kvadrat v tabeli \ref{table:mag3} je normalen.
 To je tudi najmanjši netrivialen normalen magični kvadrat.
 Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevil. % sklic: table:mag3
 
@@ -181,9 +182,11 @@ in zato kvadrat ni normalen.
       Magična konstanta normalnega magičnega kvadrata reda !!
       je enaka
       \begin{equation}
+         \label{eq:mc}
          % oznaka: eq:mc
          % Okolje `equation` je že prikazni matematični način,
          % zato tu izraz vpišite brez `\[` in `\]`.
+         M2(n) = 1 2n(n2 +1).
          !!
       \end{equation}
    \end{izrek}
@@ -218,17 +221,22 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
 
 Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli ??.
 % sklic: table:stevila
-
+\begin{table}[h!]
+   \centering
+\caption{Število različnih normalnih magičnih kvadratov}
 % - napis nad tabelo: Število različnih normalnih magičnih kvadratov
 % - oznaka: table:stevila
 % Začetek tabele
-      točna vrednost približek
-      red 1 2 3 4 5 6
+\begin{tabular}{lcccccc}
+   \toprule
+      &\multicolumn{5}{c}{točna vrednost} &približek\\\hline
+      red & 1& 2& 3& 4& 5& 6\\\hline
       % Decimalno vejico v matematičnem načinu zapišite kot {,},
       % sicer jo LaTeX izpiše kot ločilo, s presledkom za njo.
-      število kvadratov 1 0 1 880 275305224 !!
-% Konec tabele
-
+      število kvadratov &1 &0& 1& 880 &275305224& $(1{,}7745±0{,}0016)10^{19}$\\ \bottomrule
+\end{tabular}
+      % Konec tabele
+\end{table}
 Vse normalne magične kvadrate reda 4 je oštevilčil Frénicle de Bessy
 leta 1693, glej \cite{bessy}, in jih je moč najti v knjigi \cite{berlekamp}
 iz leta 1982. Število normalnih kvadratov reda 5 je izračunal
