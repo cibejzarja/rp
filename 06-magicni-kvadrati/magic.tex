@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{url}
 \usepackage{booktabs}
@@ -10,7 +11,7 @@
 \newtheorem{definicija}{Definicija}}
 {\theoremstyle{plain}
 \newtheorem{izrek}{Izrek}}
-
+\newcommand{\m}{\mathcal{M}}
 % Definicija okoli za definicije in vaje
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
@@ -97,7 +98,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}. % sklic
  \begin{definicija}
    Magični kvadrat reda \(n\) je \emph{normalen}, če v njem nastopajo števila
    \begin{equation}
-      % oznaka: eq:numbers
+   \label{eq:numbers}
       1, 2, 3, \ldots, n^2-1, n^2.
    \end{equation}
  \end{definicija}
@@ -179,15 +180,14 @@ in zato kvadrat ni normalen.
 % Začetek okolja izrek
    
    \begin{izrek}
-      Magična konstanta normalnega magičnega kvadrata reda !!
+      Magična konstanta normalnega magičnega kvadrata reda $n$
       je enaka
       \begin{equation}
          \label{eq:mc}
          % oznaka: eq:mc
          % Okolje `equation` je že prikazni matematični način,
          % zato tu izraz vpišite brez `\[` in `\]`.
-         M2(n) = 1 2n(n2 +1).
-         !!
+         \m_2(n) = \frac{1}{2}n(n^2 +1).
       \end{equation}
    \end{izrek}
 % Konec okolja izrek
@@ -196,21 +196,21 @@ in zato kvadrat ni normalen.
    
    \begin{proof}
       V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
-      števil (glej ?? na strani ??) enaka
-      !!. Ker imamo
+      števil (glej \eqref{eq:numbers} na strani \pageref{eq:numbers}) enaka
+      $ 1+2+3+...+n^2 = \sum^{n^2}_{k=1}k = \frac{1}{2} n^2(n^2+1)$. Ker imamo
       v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
-      enaka številu \(M_2(n)\). % sklica: eq:numbers, eq:numbers
+      enaka številu \(\m_2(n)\). % sklica: eq:numbers, eq:numbers
    \end{proof}
 % Konec dokaza
 
-Preprost račun pokaže, da je konstanti ?? analogna konstanta
-\(M_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
+Preprost račun pokaže, da je konstanti \eqref{eq:mc} analogna konstanta
+\(\m_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
 \(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
-!!
+\[ \m_2 (n ; A , D ) = \frac{1}{2} n \left( 2 A+D(n^2 - 1) \right) \]
 
 \begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda \(n\) odštejemo
-      od števila !!, dobimo nov magični kvadrat, ki je prvotnemu
+      od števila $n^2 + 1$, dobimo nov magični kvadrat, ki je prvotnemu
       \emph{komplementaren}.
 \end{definicija}
 
@@ -219,10 +219,11 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
       iz drugega s pomočjo zasukov oziroma zrcaljenj.
 \end{definicija}
 
-Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli ??.
-% sklic: table:stevila
+Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli \ref{table:stevila}.
+% sklic: 
 \begin{table}[h!]
    \centering
+   \label{table:stevila}
 \caption{Število različnih normalnih magičnih kvadratov}
 % - napis nad tabelo: Število različnih normalnih magičnih kvadratov
 % - oznaka: table:stevila
