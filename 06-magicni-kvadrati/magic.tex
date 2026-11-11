@@ -1,0 +1,249 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\usepackage{url}
+
+{\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}}
+{\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}}
+
+% Definicija okoli za definicije in vaje
+% Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
+\setlength{\belowcaptionskip}{2mm}
+% Nastavimo odmik prve vrstice v odstavku na 0mm.
+\setlength{\parindent}{0mm}
+
+% Kjer v besedilu naletite na niz `!!`, ga nadomestite z matematičnim izrazom
+% iz datoteke `magic-resitev.pdf`.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prvi sklop nalog
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Magični kvadrati}
+\date{}
+% 1. naloga
+% Glavo dokumenta popravite tako, da se ne bo izpisal datum.
+% To naredite tako, da za ukazom `\title` dodate ukaz `\date{}`.
+
+\begin{document}
+
+\maketitle
+
+Prirejeno po:
+%
+% 2. naloga
+% Za izpis spletnih naslovov morate uporabiti ukaz `\url`.
+% S tem ukazom lahko izpišete en spletni naslov tako, da
+% naslov podate kot argument ukaza `\url` v zavitih oklepajih.
+% V spodnjem okolju `itemize` uporabite ukaz `\url` na obeh spletnih naslovih
+% (naslova sta v komentarju, da ne pride do napake pri prevajanju te datoteke).
+\begin{itemize}
+   \item \url{http://mathworld.wolfram.com/MagicSquare.html}
+   \item \url{http://en.wikipedia.org/wiki/Magic_square}
+\end{itemize}
+
+% 3. naloga
+% Na tem mestu uporabite ukaz, ki izpiše kazalo vsebine.
+% Poiščite ga na spletu: po angleško se kazalu vsebine reče "table of contents".
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Konec prvega sklopa nalog
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Z ukazom `\newpage` lahko povzročite prehod na novo stran.
+\newpage
+
+\section{Uvod}
+
+ \begin{definicija}
+   \emph{Magični kvadrat} reda \(n\) je nabor \(n^2\) različnih števil,
+   ki so razvrščena v kvadratno tabelo tako, da vedno dobimo enako vsoto,
+   če seštejemo vsa števila poljubne vrstice, vsa števila poljubnega
+   stolpca ali vsa števila v katerikoli od glavnih diagonal.
+ \end{definicija}
+
+Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
+
+   
+      
+\begin{table}
+   
+
+
+% - napis nad tabelo: Magični kvadrat reda 3
+% - oznaka: table:mag3
+% Začetek magičnega kvadrata
+\begin{center}
+\begin{tabular}{|c|c|c|}
+   \hline
+   8 & 1 & 6 \\\hline
+   3 & 5 & 7 \\\hline
+   4 & 9 & 2 \\
+   \hline
+\end{tabular}
+\end{center}
+
+\end{table}
+% Konec magičnega kvadrata
+
+
+ \begin{definicija}
+   Magični kvadrat reda \(n\) je \emph{normalen}, če v njem nastopajo števila
+   \begin{equation}
+      % oznaka: eq:numbers
+      1, 2, 3, \ldots, n^2-1, n^2.
+   \end{equation}
+ \end{definicija}
+
+Magični kvadrat v tabeli ?? je normalen.
+To je tudi najmanjši netrivialen normalen magični kvadrat.
+Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevil. % sklic: table:mag3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Zgodovina}
+
+\subsection{Kvadrat ">Lo Shu"<}
+
+Kitajska literatura iz časa vsaj 2800 let pred našim štetjem govori o legendi
+\emph{Lo Shu} -- ">zvitek reke Lo"<. V antični Kitajski je prišlo do
+silne poplave. Ljudje so skušali rečnemu bogu narasle reke Lo ponuditi daritev,
+da bi pomirili njegovo jezo. Iz vode se je prikazala želva z zanimivim vzorcem
+na oklepu: v tabeli velikosti tri krat tri so bila predstavljena števila, tako
+da je bila vsota števil v katerikoli vrstici, kateremkoli stolpcu in na obeh
+glavnih diagonalah enaka: 15. To število je tudi enako številu dni v 24 ciklih
+kitajskega sončnega leta. Ta vzorec so na določen način uporabljali upravljalci
+reke.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Kulturna pomembnost}
+
+Magični kvadrati so fascinirali človeštvo skozi vso zgodovino. Najdemo jih
+v številnih kulturah, npr.\ v Egiptu in Indiji, vklesane v kamen ali
+kovino, uporabljane kot talismane za dolgo življensko dobo in v
+izogib boleznim.
+
+\emph{Kubera-Kolam} je talna poslikava, ki se uporablja v Indiji, in je v
+obliki magičnega kvadrata reda 3. Ta je v bistvu enak kot kvadrat
+Lo Shu, vendar je vsako število povečano za 19.
+
+Z magičnimi kvadrati so se ukvarjali tudi najbolj znani matematiki kot na
+primer Euler, glej ???. % ključ: euler
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Zgodnji kvadrati reda 4}
+
+Najzgodnejši znani magični kvadrat reda 4 je bil odkrit na napisu
+v Khajurahu v Indiji in v Enciklopediji Bratovščine Čistosti iz enajstega
+ali dvanajstega stoletja. Vrh vsega gre celo za ">panmagični kvadrat"<.
+V Evropi sta morda najbolj znana naslednja magična kvadrata reda 4.
+
+\paragraph{Magični kvadrat v litografiji Melancholia I}
+Albrechta Dürerja naj bi bil najzgodnejši magični kvadrat
+v evropski umetnosti. Zelo podoben je kvadratu Yang Huija, ki je nastal na Kitajskem
+približno 250 let pred Dürerjevim časom.
+
+Vsoto 34 je mogoče najti pri seštevanju števil v vsaki vrstici, vsakem stolpcu,
+na vsaki diagonali, v vsakem od štirih kvadrantov, v sredinskih štirih poljih,
+v štirih kotih, v štirih sosedih kotov v smeri urinega kazalca (\(3+8+14+9\)), v
+štirih sosedih kotov v nasprotni smeri urinega kazalca (\(2+5+15+12\)), v dveh naborih
+simetričnih parov (\(2+8+9+15\) in \(3+5+12+14\)), in še na nekaj drugih načinov.
+Števili na sredini spodnje vrstici tvorita letnico litografije: 1514.
+
+\paragraph{Pasijonska fasada na katedrali Sagrada família v Barceloni}
+vsebuje magični kvadrat reda 4.
+
+Vsota števil v vrsticah, stolpcih oziroma na diagonalah je 33 -- Jezusova starost
+v času pasijona. Strukturno je kvadrat podoben Dürerjevemu, vendar so števila
+v štirih poljih zmanjšana za 1. Posledica je, da sta števili 10 in 14 podvojeni
+in zato kvadrat ni normalen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Osnovne lastnosti}
+
+\begin{definicija}
+      Vsoto ene vrstice, enega stolpca ali ene od glavnih diagonal
+      v magičnem kvadratu imenujemo \emph{magična konstanta}.
+\end{definicija}
+
+% Začetek okolja izrek
+   
+   \begin{izrek}
+      Magična konstanta normalnega magičnega kvadrata reda !!
+      je enaka
+      \begin{equation}
+         % oznaka: eq:mc
+         % Okolje `equation` je že prikazni matematični način,
+         % zato tu izraz vpišite brez `\[` in `\]`.
+         !!
+      \end{equation}
+   \end{izrek}
+% Konec okolja izrek
+
+% Začetek dokaza
+   
+   \begin{proof}
+      V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
+      števil (glej ?? na strani ??) enaka
+      !!. Ker imamo
+      v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
+      enaka številu \(M_2(n)\). % sklica: eq:numbers, eq:numbers
+   \end{proof}
+% Konec dokaza
+
+Preprost račun pokaže, da je konstanti ?? analogna konstanta
+\(M_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
+\(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
+!!
+
+\begin{definicija}
+      Če vsako od števil v normalnem magičnem kvadratu reda \(n\) odštejemo
+      od števila !!, dobimo nov magični kvadrat, ki je prvotnemu
+      \emph{komplementaren}.
+\end{definicija}
+
+\begin{definicija}
+      Pravimo, da sta dva magična kvadrata \emph{različna}, če enega ni mogoče dobiti
+      iz drugega s pomočjo zasukov oziroma zrcaljenj.
+\end{definicija}
+
+Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli ??.
+% sklic: table:stevila
+
+% - napis nad tabelo: Število različnih normalnih magičnih kvadratov
+% - oznaka: table:stevila
+% Začetek tabele
+      točna vrednost približek
+      red 1 2 3 4 5 6
+      % Decimalno vejico v matematičnem načinu zapišite kot {,},
+      % sicer jo LaTeX izpiše kot ločilo, s presledkom za njo.
+      število kvadratov 1 0 1 880 275305224 !!
+% Konec tabele
+
+Vse normalne magične kvadrate reda 4 je oštevilčil Frénicle de Bessy
+leta 1693, glej ???, in jih je moč najti v knjigi ???
+iz leta 1982. Število normalnih kvadratov reda 5 je izračunal
+R. Schroeppel leta 1973 (glej Gardner ???).
+Natančno število vseh različnih normalnih magičnih kvadratov reda 6 ni znano.
+Avtorja navedenega približka sta Pinn in Wieczerkowski (glej ???), ki
+sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
+ % ključi: bessy, berlekamp, gardner, pinn
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+% Tu vstavite bibliografijo
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
