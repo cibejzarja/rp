@@ -1,0 +1,59 @@
+/* Slog za stran o ekvivalentni dozi banane */
+
+/* Besedilo strani: ozek stolpec na sredini */
+body {
+  max-width: 45em;
+  margin: 0 auto;
+  padding: 1em;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+  color: #222222;
+}
+
+/* Vsi naslovi */
+h1, h2 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Naslovi razdelkov */
+h2 {
+  color: #1f4e79;
+  border-bottom: 1px solid #cccccc;
+  clear: both;
+}
+
+/* Tabele */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.25em 0.75em;
+  border: 1px solid #cccccc;
+  text-align: left;
+}
+
+/* Glava tabele se ne lomi v več vrstic */
+th {
+  white-space: nowrap;
+}
+
+/* Slike s podnapisi so na desni in zavzamejo 30 % širine stolpca z besedilom */
+.slika {
+  float: right;
+  width: 30%;
+  margin: 0 0 1em 1em;
+}
+
+/* Slike niso širše od okvirja, v katerem so */
+img {
+  max-width: 100%;
+}
+
+/* Podnapisi pod slikami */
+.podnapis {
+  font-style: italic
+  margin-top: 0.25em;
+  font-size: 0.9em;
+  color: #555555;
+}

@@ -1,0 +1,104 @@
+<!--
+  Naloga (10 točk)
+
+  Dopolnite datoteki dokument.html in oblikovanje.css po navodilih v komentarjih (Naloga 1.-5.).
+  Pri točkovanju bomo upoštevali, ali (in v kolikšni meri) je izvorna koda veljaven in urejen HTML.
+
+  Naloga 1. (3 točke) V tej datoteki so tri napake. Smiselno jih popravite.
+  Pomagajte si s pogledom Problems v VSCode, kot na vajah.
+-->
+<html lang="sl">
+  <head>
+    <link rel="stylesheet" href="oblikovanje.css">
+    <meta charset="UTF-8">
+    <title>Ekvivalentna doza banane</title>
+    <!-- Naloga 2. (2 točki) Tu vključite datoteko s slogi oblikovanje.css. V tej datoteki
+         - barvo naslovov razdelkov h2 spremenite v #1f4e79,
+         - pravilu za podnapise pod slikami (.podnapis) dodajte deklaracijo
+           "font-style: italic;". -->
+  </head>
+  <body>
+    <h1>Ekvivalentna doza banane</h1>
+
+    <!-- Naloga 3. (1 točka) V naslednjem odstavku naj bo besedilo "Banana equivalent dose"
+         povezava na članek na angleški Wikipediji (naslov je v komentarju na koncu odstavka). -->
+    <p>Vsebina te strani je prevedena in prirejena po članku <a href="https://en.wikipedia.org/wiki/Banana_equivalent_dose">Banana equivalent dose</a> na angleški
+      Wikipediji. </p>
+
+    <div class="slika">
+       <img src="banana.jpg" alt="Banana, vir kalija-40"> 
+      <!-- Naloga 4. (2 točki) Sem vstavite sliko banana.jpg.
+           Nadomestno besedilo slike naj bo "Banana, vir kalija-40".
+           Elementu div, v katerem sta slika in podnapis, dodajte atribut class
+           z vrednostjo slika. -->
+           
+      <p class="podnapis">Banana vsebuje naravno radioaktivni kalij-40.
+        Foto: Evan-Amos, CC BY-SA 3.0</p>
+    </div>
+
+    <p><strong>Ekvivalentna doza banane</strong> (angl. <em>banana equivalent dose<em>, BED) je neformalna enota za izpostavljenost ionizirajočemu sevanju. Z njo dozo sevanja primerjamo z dozo, ki jo prejmemo, če pojemo eno banano povprečne velikosti. Banane namreč vsebujejo naravno radioaktivni izotop kalij-40. En BED je približno 0,1 mikrosieverta (μSv). Enota je namenjena izobraževanju in ni uradno sprejeta.</p>
+
+    <p>Izvor zamisli ni znan. Ena prvih omemb je iz leta 1995 z dopisnega seznama RadSafe o jedrski varnosti, kjer je Gary Mansfield iz laboratorija Lawrence Livermore zapisal, da mu ekvivalentna doza banane zelo pomaga, ko javnosti razlaga zanemarljivo majhne doze in prav tako majhna tveganja. Za banano z maso 150 g je predlagal vrednost približno 0,1 μSv.</p>
+
+    <h2>Uporaba</h2>
+
+    <p>Ekvivalentna doza banane je neformalna enota, zato so vse primerjave le približne. Doza, ki jo prejmemo z eno banano, je približno odstotek povprečne dnevne izpostavljenosti sevanju iz okolja. Spodnja tabela primerja nekaj doz.</p>
+
+    <!-- Naloga 5. (2 točki) Spodnje doze zapišite kot tabelo s tremi stolpci.
+         Vsaka celica je v svoji vrstici, vrstice tabele pa so ločene s prazno vrstico.
+         Prva vrstica tabele je glava; za njene celice uporabite primerno značko. -->
+    <table>
+      <tr>
+        <th>Vir sevanja</th>
+        <th>Doza</th>
+        <th>Število banan</th>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Ena banana</td>
+        <td>0,1 μSv</td>
+        <td>1</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Povprečna dnevna izpostavljenost sevanju iz okolja</td>
+        <td>10 μSv</td>
+        <td>100</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Bivanje 16 km od jedrske elektrarne Three Mile Island med nesrečo leta 1979</td>
+        <td>80 μSv</td>
+        <td>800</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Največja dovoljena letna doza zaradi izpustov iz jedrske elektrarne</td>
+        <td>250 μSv</td>
+        <td>2 500</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Računalniška tomografija prsnega koša</td>
+        <td>7 mSv</td>
+        <td>70 000</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>Smrtna doza</td>
+        <td>3,5 Sv</td>
+        <td>35 000 000</td>
+      </tr>
+    </table>
+
+    <h2>Kritika</h2>
+
+    <p>Več virov opozarja, da je zamisel pomanjkljiva, ker banana ne poveča naše izpostavljenosti radioaktivnemu kaliju. Količina kalija, in s tem kalija-40, v človeškem telesu je zaradi homeostaze skoraj stalna: presežek, ki ga zaužijemo s hrano, telo hitro izloči z urinom. Dodatna izpostavljenost po zaužiti banani zato traja le nekaj ur, dokler ledvice spet ne vzpostavijo običajne količine kalija.</p>
+
+    <p>Za primerjavo: odrasel človek z maso 70 kg ima v telesu približno 175 g kalija, v katerem vse življenje vsako sekundo razpade okoli 5 400 jeder.</p>
+
+    <h2>Druga živila</h2>
+
+    <p>Veliko kalija, in s tem kalija-40, vsebujejo tudi krompir, fižol, sončnična semena in oreščki. Brazilski oreščki poleg kalija vsebujejo tudi precej radija: izmerili so ga do 444 Bq/kg. Tobak vsebuje sledove torija, polonija in urana, sušenje in kajenje pa jih še zgostita.</p>
+  </body>
+</html>
