@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+
+\setlength{\parindent}{0mm}
+
+\begin{document}
+
+\section*{Matrike}
+% Oblikujte determinanto matrike.
+% Vsebina matrike je že pripravljena v komentarju spodaj.
+% V pomoč naj vam bo Overleafova dokumentacija o matrikah:
+% https://www.overleaf.com/learn/latex/Matrices
+Izračunaj determinanto
+$$
+\begin{vmatrix}
+    -1 & 4 & 4 & -2 \\
+    1 & 4 & 5 & -1 \\
+    1 & 4 & -2 & 2 \\
+    3 & 8 & 4 & 3 \\
+    \end{vmatrix}.
+$$
+
+\section*{Okolje \texttt{align}}
+% Okolje align je namenjeno poravnavi enačb.
+% Če ne želite, da se enačbe oštevilčijo, uporabite okolje align*.
+% Oblikujte spodnje enačbe z okoljem align*.
+% Če naredite po en kurzor na začetku vsake vrstice,
+% boste lahko oblikovali vse tri vrstice hkrati.
+Nariši grafe funkcij:
+
+\begin{align*}
+y &= x^2 - 3|x| + 2    &y &= 3 \sin(\pi+x) - 2 \\
+y &= \log_2(x-2) + 3   &y &= 2 \sqrt{x^2+15} + 6 \\
+y &= 2^{x-3} + 1       &y &= \cos(x-3) + \sin^2(x+1)
+\end{align*}
+
+
+\section*{Okolje \texttt{multline}}
+% Oblikujte spodnjo enačbo z okoljem multline*,
+% da bo oblikovana kot v rešitvi.
+Poišči vse rešitve enačbe
+
+\begin{multline*}
+(1+x+x^2) \cdot (1+x+x^2+x^3+\ldots+x^9+x^{10}) = \\
+ =(1+x+x^2+x^3+x^4+x^5+x^6)^2.
+\end{multline*}
+
+\section*{Okolje \texttt{cases}}
+% Oblikujte spodnji funkcijski predpis z okoljem cases,
+% da bo oblikovan kot v rešitvi.
+Dana je funkcija
+$$ f(x,y)=
+   \begin{cases}
+   \frac{3x^2y-y^3}{x^2+y^2};  &(x,y)\neq(0,0) \text{,}\\
+   a; &(x,y)= (0,0).
+   \end{cases} 
+$$
+\begin{itemize}
+\item Določi \(a\), tako da izračunaš limito \( \lim_{(x,y)\to(0,0)} f(x,y) \).
+\item Izračunaj parcialna odvoda \(f_x(x,y)\) in \(f_y(x,y)\).
+\end{itemize}
+
+\end{document}
