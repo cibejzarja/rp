@@ -1,0 +1,17 @@
+\begin{frame}{Konstrukcija pravokotnice}
+	\centering
+	\begin{tikzpicture}
+		\coordinate (T) at (0, 1.4);
+		\draw[blue, very thick, name path=p] (-3, 0) -- (3, 0) node[right] {$p$};
+		\onslide<2->{\draw[gray, name path=k] (T) ++(210:2) arc (210:330:2);}
+		\path[name intersections={of=p and k, by={A, B}}];
+		\onslide<3->{\draw[gray, name path=m] (A) ++(-70:2) arc (-70:70:2);}
+		\onslide<4->{\draw[gray, name path=n] (B) ++(250:2) arc (250:110:2);}
+		\path[name intersections={of=m and n, by={C, T'}}];
+		\onslide<6->{\draw[red, very thick] (T) -- (C);}
+		\fill[blue] (T) circle (2pt) node[above left] {$T$};
+		\onslide<2->{\draw (A) circle (1.5pt) node[below left] {$A$};}
+		\onslide<2->{\draw (B) circle (1.5pt) node[below right] {$B$};}
+		\onslide<5->{\draw (C) circle (1.5pt) node[below right] {$C$};}
+	\end{tikzpicture}
+\end{frame}

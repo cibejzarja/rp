@@ -1,0 +1,19 @@
+\begin{frame}{Postopno odkrivanje v okolju align}
+	% Naloga 3.2:
+	% Za pravilno postopno odkrivanje morate na enem mestu uporabiti ukaz `only',
+	% na dveh pa ukaz `onslide'.
+	% Namig: prva vrstica enačbe se od druge podprosojnice naprej nadaljuje
+	% z vsebino druge vrstice. To dosežete tako, da z ukazom `only' samo na prvi
+	% podprosojnici postavite del prve vrstice od znaka & do znakov \\,
+	% vključno z njimi:
+	%     (a+b)^n \only<1>{&= \ldots \\}
+	% Na poznejših podprosojnicah tako ni ne treh pik ne konca vrstice,
+	% zato se za (a+b)^n izpiše naslednja vrstica.
+	Dokaži \emph{binomsko formulo}: za vsaki realni števili \(a\) in \(b\) in za vsako naravno število \(n\) velja
+	\begin{align*}
+	(a+b)^n \only{&=\ldots \\}<1>
+	\onslide<2->{&= (a+b) (a+b) \dots (a+b) \\}
+	\onslide<3->{&= a^n + n a^{n-1} b + \dots + \binom{n}{k} a^{n-k} b^k + \dots + n a b^{n-1} + b^n \\}
+	&= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
+	\end{align*}
+\end{frame}
